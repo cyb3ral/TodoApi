@@ -10,7 +10,7 @@ namespace TodoApi.Models
         public string Id { get; set; }
 
         [BsonElement]
-        public string Name { get; set; }
+        public string Task { get; set; }
         [BsonElement]
         public bool Completed { get; set; }
     }
