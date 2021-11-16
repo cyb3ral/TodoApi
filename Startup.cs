@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-
+using TodoApi.Services;
 namespace TodoApi
 {
     public class Startup
@@ -28,6 +28,8 @@ namespace TodoApi
         {
 
             services.AddControllers();
+            services.AddScoped<TodoService>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TodoApi", Version = "v1" });
